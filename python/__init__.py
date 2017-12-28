@@ -27,8 +27,8 @@ description here (python/__init__.py).
 try:
 	# this might fail if the module is python-only
 	from zmqraw_swig import *
-except ImportError:
-	pass
+except ImportError, e:
+    print "Error importing zmqraw:", e
 
 # import any pure python here
 #

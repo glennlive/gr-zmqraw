@@ -37,7 +37,7 @@ if(NOT zmqraw_sources)
 endif(NOT zmqraw_sources)
 
 add_library(gnuradio-zmqraw SHARED ${zmqraw_sources})
-target_link_libraries(gnuradio-zmqraw ${Boost_LIBRARIES} ${GNURADIO_ALL_LIBRARIES})
+target_link_libraries(gnuradio-zmqraw zmq ${Boost_LIBRARIES} ${GNURADIO_ALL_LIBRARIES})
 set_target_properties(gnuradio-zmqraw PROPERTIES DEFINE_SYMBOL "gnuradio_zmqraw_EXPORTS")
 
 if(APPLE)
